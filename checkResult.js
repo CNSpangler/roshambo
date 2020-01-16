@@ -1,5 +1,4 @@
 import foeThrow from './foeThrow.js';
-import { getRandomNumber } from './foeThrow.js';
 export default checkResult;
 export { win, lose, draw };
 
