@@ -10,8 +10,8 @@ let count = 0;
 let wins = 0;
 winCount.textContent = wins;
 playedCount.textContent = count;
-const playerWeapon = document.getElementById('playerWeapon');
-const computerWeapon = document.getElementById('computerWeapon');
+const playerImg = document.getElementById('playerImg');
+const computerImg = document.getElementById('computerImg');
 
 rumble.addEventListener('click', () => {
     winLose.textContent = '';
@@ -31,6 +31,23 @@ rumble.addEventListener('click', () => {
         winLose.textContent = 'You lost!';
     }
     winCount.textContent = wins;
+
+// show player result images instead of text
+    if (player === 'rock') {
+        playerImg.src = './assets/rock.png';
+    } else if (player === 'paper') {
+        playerImg.src = './assets/paper.png';
+    } else if (player === 'scissors') {
+        playerImg.src = './assets/scissors.png';
+    };
+// show computer results image instead of text
+    if (computer === 'rock') {
+        computerImg.src = './assets/rock.png';
+    } else if (computer === 'paper') {
+        computerImg.src = './assets/paper.png';
+    } else if (computer === 'scissors') {
+        computerImg.src = './assets/scissors.png';
+    }
 });
 
 reset.addEventListener('click', () => {
