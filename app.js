@@ -39,4 +39,6 @@ reset.addEventListener('click', () => {
     winLose.textContent = '';
     winCount.textContent = wins;
     playedCount.textContent = count;
+    playerWeapon.textContent = '';
+    computerWeapon.textContent = '';
 })
