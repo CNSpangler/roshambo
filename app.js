@@ -10,25 +10,26 @@ let count = 0;
 let wins = 0;
 winCount.textContent = wins;
 playedCount.textContent = count;
+const playerWeapon = document.getElementById('playerWeapon');
+const computerWeapon = document.getElementById('computerWeapon');
 
 rumble.addEventListener('click', () => {
     winLose.textContent = '';
     count++;
     playedCount.textContent = count;
     const player = document.querySelector('input:checked').value;
-    foeThrow();
     const computer = foeThrow();
-    console.log(player);
-    console.log(computer);
-    checkResult(player, computer);
-    if (checkResult() === 'draw') {
+    playerWeapon.textContent = player;
+    computerWeapon.textContent = computer;
+    const result = checkResult(player, computer);
+    if (result === 'draw') {
         winLose.textContent = 'It\'s a draw!';
-    } else if (checkResult() === 'win') {
+    } else if (result === 'win') {
         winLose.textContent = 'You won!';
         wins++;
-    } else if (checkResult() === 'lose') {
+    } else if (result === 'lose') {
         winLose.textContent = 'You lost!';
-    };
+    }
     winCount.textContent = wins;
 });
 

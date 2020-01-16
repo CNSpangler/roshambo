@@ -1,0 +1,24 @@
+
+
+img {
+    width: 75px;
+    border-radius: 10px;
+    border: solid rebeccapurple 10px;
+}
+
+#results {
+    max-width: 250px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+#winLose {
+    font-size: 22px;
+    color: yellow;
+}

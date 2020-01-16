@@ -24,18 +24,33 @@
         </ol>
         <h3>Can you defeat THE DOM????</h3>
     </div>
-    <label id="rock-button">
+    <label>
+        <img src="./assets/rock.png"><br>
         <input type="radio" name="weapon" value="rock"> ROCK <br>
     </label>
+    <hr>
     <label>
+        <img src="assets/paper.png"><br>
         <input type="radio" name="weapon" value="paper"> PAPER <br>
     </label>
+    <hr>
     <label>
+        <img src="assets/scissors.png"><br>
         <input type="radio" name="weapon" value="scissors"> SCISSORS <br>
     </label><br>
+    <hr>
 
     <button id="rumble">RUMBLE</button>
     <button id="reset">Reset Game</button>
+
+    <div>
+        <h3>You chose:</h3>
+        <p id="playerWeapon"></p>
+    </div>
+    <div>
+        <h3>The computer chose:</h3>
+        <p id="computerWeapon"></p>
+    </div>
 
     <div id="results">
         <span id="winLose"></span><br>
@@ -44,5 +59,10 @@
 
     <script type="module" src="app.js"></script>
 </body>
+
+<hr>
+<footer>
+    <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a>
+</footer>
 
 </html>
