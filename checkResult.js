@@ -1,4 +1,3 @@
-import foeThrow from './foeThrow.js';
 export default checkResult;
 
 function checkResult(player, computer) {

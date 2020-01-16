@@ -1,9 +1,24 @@
-
+* {
+    background-color: thistle;
+}
+header {
+    text-align: center;
+}
 
 img {
     width: 75px;
     border-radius: 10px;
     border: solid rebeccapurple 10px;
+}
+
+label {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h3 {
+    text-align: center;
 }
 
 #results {
