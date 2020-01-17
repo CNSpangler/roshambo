@@ -1,76 +1,87 @@
 import checkResult from '../checkResult.js';
 
 const test = QUnit.test;
+QUnit.module('testing checkResult');
 
-test('identical rock throws should return draw', function(assert) {
+
+test('identical rock throws should return draw', assert => {
     const player = 'rock';
     const computer = 'rock';
     const expected = 'draw';
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('identical paper throws should return draw', function(assert) {
+test('identical paper throws should return draw', assert => {
     const player = 'paper';
     const computer = 'paper';
     const expected = 'draw';
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('identical scissors throws should return draw', function(assert) {
+test('identical scissors throws should return draw', assert => {
     const player = 'scissors';
     const computer = 'scissors';
     const expected = 'draw';
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('player rock computer paper = lose', function(assert) {
+test('player rock computer paper = lose', assert => {
     const player = 'rock';
     const computer = 'paper';
     let expected = ('lose');
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('player rock computer scissors = win', function(assert) {
+test('player rock computer scissors = win', assert => {
     const player = 'rock';
     const computer = 'scissors';
     let expected = ('win');
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('player paper computer rock = win', function(assert) {
+test('player paper computer rock = win', assert => {
     const player = 'paper';
     const computer = 'rock';
     let expected = ('win');
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('player paper computer scissors = lose', function(assert) {
+test('player paper computer scissors = lose', assert => {
     const player = 'paper';
     const computer = 'scissors';
     let expected = ('lose');
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('player scissors computer rock = lose', function(assert) {
+test('player scissors computer rock = lose', assert => {
     const player = 'scissors';
     const computer = 'rock';
     let expected = ('lose');
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
-test('player scissors computer paper = win', function(assert) {
+test('player scissors computer paper = win', assert => {
     const player = 'scissors';
     const computer = 'paper';
     let expected = ('win');
     const result = checkResult(player, computer);
+
     assert.equal(expected, result);
 });
 
