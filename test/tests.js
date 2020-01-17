@@ -1,2 +1,2 @@
 import './example.test.js';
-import './foe.test.js';
+import './checkResult.test.js';
