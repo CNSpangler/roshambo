@@ -1,18 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     text-align: center;
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rebeccapurple;
     color: yellow;
-    max-width: 50%;
+    max-width: 85%;
     border-radius: 15px;
     padding: 10px;
 }
 
 body {
-    background-color: thistle;
-}
-
-footer {
     background-color: thistle;
 }
 
@@ -22,38 +23,80 @@ img {
 }
 
 label {
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-    
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+label:hover {
+    transform: scale(1.2);
+}
+
+input:checked + .radio-button {
+    border: 5px yellow;
+    border-radius: 10px;
 }
 
 h3 {
     text-align: center;
+    color: yellow;
+    font-size: 20px;
 }
 
-#game {
-    max-width: 50%;
-    margin-left: 25%;
-    background-color: rebeccapurple;
-    color: white;
+button {
+    margin: 5px 15px;
     border-radius: 15px;
-    padding: 10px;
+    border-style: inset;
 }
 
-ol {
+button:hover {
+    box-shadow: 5px 7px;
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: thistle;
+    text-align: center;
+}
+
+#instructions {
     background-color: rebeccapurple;
     color: white;
     font-weight: bolder;
-    max-width: 30%;
-    margin-left: 35%;
+    max-width: 60%;
+    margin: 1.5em auto;
     padding: 25px;
     border-radius: 15px;
 }
 
+#game {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+#buttons {
+    max-width: 100%;
+}
+
 #results {
     max-width: 30%;
-    margin-left: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
     background-color: rebeccapurple;
     color: white;
     font-size: 16px;
@@ -61,7 +104,17 @@ ol {
     text-align: center;
     padding: 10px;
     border-radius: 15px;
-    align-self: center;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.vs {
+    float: left;
+    width: 500px;
 }
 
 #playerWeapon {

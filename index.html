@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-
 <header>
     <h1>RO-SHAM-BOOOOOOOOOO!</h1>
     <h2>Get ready to rumble.</h2>
 </header>
-
 <body>
     <div id="instructions">
         <h3>Instructions:</h3>
@@ -24,47 +21,48 @@
         </ol>
         <h3>Can you defeat THE DOM????</h3>
     </div>
-
     <div id="game">
-        <label>
-            <img src="./assets/rock.png"><br>
-            <input type="radio" name="weapon" value="rock"> ROCK <br>
-        </label>
-        <label>
-            <img src="assets/paper.png"><br>
-            <input type="radio" name="weapon" value="paper"> PAPER <br>
-        </label>
-        <label>
-            <img src="assets/scissors.png"><br>
-            <input type="radio" name="weapon" value="scissors"> SCISSORS <br>
-        </label><br><br>
-
-        <button id="rumble">RUMBLE</button>
-        <button id="reset">Reset Game</button>
+        <div class="radio-buttons">
+            <label class="radio-button">
+                <img src="./assets/rock.png"><br>
+                <input type="radio" name="weapon" value="rock"> ROCK <br>
+            </label>
+            <label class="radio-button">
+                <img src="assets/paper.png"><br>
+                <input type="radio" name="weapon" value="paper"> PAPER <br>
+            </label>
+            <label class="radio-button">
+                <img src="assets/scissors.png"><br>
+                <input type="radio" name="weapon" value="scissors"> SCISSORS <br>
+            </label>
+        </div>
+        <div id="buttons">
+            <button id="rumble">RUMBLE</button>
+            <button id="reset">Reset Game</button>
+        </div>
     </div>
-
-    <div>
-        <h3>You chose:</h3>
-        <img id="playerImg" src="">
-        <p id="playerWeapon"></p>
-    </div>
-    <div>
-        <h3>The computer chose:</h3>
-        <img id="computerImg" src="">
-        <p id="computerWeapon"></p>
-    </div>
-
+    <section class="container">
+        <div class="vs">
+            <h3>You chose:</h3>
+            <img id="playerImg" src="">
+            <p id="playerWeapon"></p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="vs">
+            <h3>The computer chose:</h3>
+            <img id="computerImg" src="">
+            <p id="computerWeapon"></p>
+        </div>
+    </section>
     <div id="results">
         <span id="winLose"></span><br>
-        <p>You have won <span id="winCount"></span> out of <span id="playedCount"></span> games.</p>
+        <p>You have won <span id="winCount">0</span> out of <span id="playedCount">0</span> games.</p>
     </div>
-
     <script type="module" src="app.js"></script>
 </body>
-
 <hr>
 <footer>
     <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a>
 </footer>
-
 </html>
