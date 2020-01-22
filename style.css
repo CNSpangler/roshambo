@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+@media (min-width: 650px) {
+    img {
+        width: 50px;
+    }
+    label {
+        margin: auto;
+    }
+    .radio-buttons {
+        overflow: auto;
+    }
+}
+
 header {
     text-align: center;
     margin-left: auto;
@@ -15,25 +27,29 @@ header {
 
 body {
     background-color: thistle;
+    width: 100%;
 }
 
 img {
-    width: 75px;
+    width: 100px;
     border-radius: 10px;
 }
 
 label {
     margin-left: 15px;
     margin-right: 15px;
+    border: 3px solid yellow;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 label:hover {
-    transform: scale(1.2);
+    border: 3px solid red;
 }
 
-input:checked + .radio-button {
-    border: 5px yellow;
-    border-radius: 10px;
+.selected {
+    border: solid 10px rgb(255, 145, 0);
+    border-radius: 15px;
 }
 
 h3 {
@@ -62,30 +78,30 @@ footer {
     background-color: rebeccapurple;
     color: white;
     font-weight: bolder;
-    max-width: 60%;
+    max-width: 80%;
     margin: 1.5em auto;
-    padding: 25px;
+    padding: 5px;
     border-radius: 15px;
 }
 
 #game {
     display: flex;
     flex-direction: column;
-    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
     background-color: rebeccapurple;
     color: white;
     border-radius: 15px;
     padding: 10px;
-    justify-content: center;
     align-items: center;
 }
 
 .radio-buttons {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 15px;
+    max-width: 100%;
 }
 
 #buttons {
@@ -93,7 +109,6 @@ footer {
 }
 
 #results {
-    max-width: 30%;
     margin-left: auto;
     margin-right: auto;
     clear: both;
@@ -106,15 +121,23 @@ footer {
     border-radius: 15px;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 50%;
     float: left;
 }
 
 .vs {
     float: left;
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
 }
 
 #playerWeapon {
@@ -132,12 +155,8 @@ footer {
 
 #computerImg {
     display: hidden;
-    max-width: 10%;
-    margin-left: 45%;
 }
 
 #playerImg {
     display: hidden;
-    max-width: 10%;
-    margin-left: 45%;
 }

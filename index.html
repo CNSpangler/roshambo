@@ -41,20 +41,22 @@
             <button id="reset">Reset Game</button>
         </div>
     </div>
-    <section class="container">
-        <div class="vs">
-            <h3>You chose:</h3>
-            <img id="playerImg" src="">
-            <p id="playerWeapon"></p>
-        </div>
-    </section>
-    <section class="container">
-        <div class="vs">
-            <h3>The computer chose:</h3>
-            <img id="computerImg" src="">
-            <p id="computerWeapon"></p>
-        </div>
-    </section>
+    <div id="hidden" class="hidden">
+        <section class="container">
+            <div class="vs">
+                <h3>You chose:</h3>
+                <img id="playerImg" src="">
+                <p id="playerWeapon"></p>
+            </div>
+        </section>
+        <section class="container">
+            <div class="vs">
+                <h3>The DOM chose:</h3>
+                <img id="computerImg" src="">
+                <p id="computerWeapon"></p>
+            </div>
+        </section>
+    </div>
     <div id="results">
         <span id="winLose"></span><br>
         <p>You have won <span id="winCount">0</span> out of <span id="playedCount">0</span> games.</p>

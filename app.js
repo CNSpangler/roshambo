@@ -9,6 +9,7 @@ const playedCount = document.getElementById('playedCount');
 const winCount = document.getElementById('winCount');
 const playerImg = document.getElementById('playerImg');
 const computerImg = document.getElementById('computerImg');
+const hidden = document.getElementById('hidden');
 let count = 0;
 let wins = 0;
 
@@ -17,6 +18,7 @@ rumble.addEventListener('click', () => {
     const player = document.querySelector('input:checked').value;
     const computer = foeThrow();
     const result = checkResult(player, computer);
+    hidden.classList.remove('hidden');
     winLose.textContent = '';
     count++;
     playedCount.textContent = count;
