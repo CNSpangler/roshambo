@@ -140,14 +140,15 @@ footer {
     max-width: 100%;
 }
 
-#playerWeapon {
+/*#playerWeapon {
     text-align: center;
+    
 }
 
 #computerWeapon {
     text-align: center;
 }
-
+*/
 #winLose {
     font-size: 22px;
     color: yellow;

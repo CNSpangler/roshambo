@@ -40,6 +40,7 @@ rumble.addEventListener('click', () => {
     } else if (player === 'scissors') {
         playerImg.src = './assets/scissors.png';
     }
+  
 // show computer results image instead of text
     if (computer === 'rock') {
         computerImg.src = './assets/rock.png';
