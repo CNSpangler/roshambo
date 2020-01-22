@@ -1,6 +1,7 @@
 import checkResult from './checkResult.js';
 import foeThrow from './foeThrow.js';
 
+// get DOM and set up variables
 const rumble = document.getElementById('rumble');
 const reset = document.getElementById('reset');
 const winLose = document.getElementById('winLose');
@@ -8,19 +9,16 @@ const playedCount = document.getElementById('playedCount');
 const winCount = document.getElementById('winCount');
 const playerImg = document.getElementById('playerImg');
 const computerImg = document.getElementById('computerImg');
-
+const hidden = document.getElementById('hidden');
 let count = 0;
 let wins = 0;
 
-
-// rumble button
+// RUMBLE button click events
 rumble.addEventListener('click', () => {
     const player = document.querySelector('input:checked').value;
     const computer = foeThrow();
     const result = checkResult(player, computer);
-
-    //display yellow win/lose text
-
+    hidden.classList.remove('hidden');
     winLose.textContent = '';
     count++;
     playedCount.textContent = count;
@@ -29,12 +27,12 @@ rumble.addEventListener('click', () => {
     } else if (result === 'win') {
         winLose.textContent = 'You won!';
         wins++;
+        winCount.textContent = wins;
     } else if (result === 'lose') {
         winLose.textContent = 'You lost!';
     }
-    winCount.textContent = wins;
 
-    // show player result images instead of text
+// show player result image instead of text
     if (player === 'rock') {
         playerImg.src = './assets/rock.png';
     } else if (player === 'paper') {
@@ -42,7 +40,8 @@ rumble.addEventListener('click', () => {
     } else if (player === 'scissors') {
         playerImg.src = './assets/scissors.png';
     }
-    // show computer results image instead of text
+  
+// show computer results image instead of text
     if (computer === 'rock') {
         computerImg.src = './assets/rock.png';
     } else if (computer === 'paper') {
@@ -52,11 +51,11 @@ rumble.addEventListener('click', () => {
     }
 });
 
+// reset button events
 reset.addEventListener('click', () => {
     count = 0;
     wins = 0;
     winLose.textContent = '';
     winCount.textContent = wins;
     playedCount.textContent = count;
-
-})
+});
